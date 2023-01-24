@@ -1,4 +1,4 @@
-//Designating variables to be used
+// set variables using getElementById to create functions
 var startButton = document.getElementById('start-btn')
 
 var quizHeader = document.querySelector('h1')
@@ -13,25 +13,26 @@ var scoreEl = document.getElementById('score')
 var scoreText = document.getElementById('score-text')
 var showHighScore = document.getElementById('viewHS')
 
+
 var choiceSection = document.getElementById('choice-box')
 var choiceOne = document.getElementById('choiceOne')
 var choiceTwo = document.getElementById('choiceTwo')
 var choiceThree = document.getElementById('choiceThree')
 var choiceFour = document.getElementById('choiceFour')
 
-//Array of objects that will be used to display information as well as to compare user input to correct answers
+//Array of questions and answers to compare user selection to correct answers
 var objArray = [{
     question: "Inside which HTML element do we put the Javascript?",
-    choices: ["<javascript", "<js>", "<script>", "<scripting>"],
+    choices: ["<script>", "<js>", "<javascript>", "<scripting>"],
     correctChoice: "<script>"
 },{
     question: "Where is the correct place to put a Javascript?",
-    choices: ["<header>", "<body>", "<footer>", "both <header> and <body>"],
+    choices: ["both <header> and <body>", "<body>", "<footer>", "<header>"],
     correctChoice: "both <header> and <body>"
 },{
     question: "How would you write a function in Javascript?",
     choices: ["function:myFunction()", "function=myFunction()", "function.myFunction()", "function myFunction()"],
-    correctChoice: "function=myFunction"
+    correctChoice: "function=myFunction()"
 },{
     question: "Which event occurs when the user clicks on an HTML element?",
     choices: ["onclick", "onchange", "onmouseclick", "onleftclick"],
@@ -43,7 +44,7 @@ var objArray = [{
 }]
 
 
-//Setting base values for variables that are numerical
+//setting variables for score time left and current question
 var score = 0
 var timeLeft = 100
 var currentQuestion = 0
@@ -51,9 +52,9 @@ var currentQuestion = 0
 
 
 function startGame() {
-    //Console.log startGame to check if button works
+    //Console.log startGame to check if button works. tested in console and button works
     console.log('Game Start');
-    //Call startClock to begin timer
+    //function to start
     startClock();
     //Call loadQuestion to load the first question and its associated choices
     loadQuestion();
@@ -81,7 +82,7 @@ var gameClock = setInterval(function(){
     timer.textContent = 'Time: ' + timeLeft;
      if(timeLeft <= 0) {
         clearInterval(gameClock);
-        endGame();
+        // endGame();
         // displayScores();
      }
 },1000);
@@ -105,33 +106,31 @@ function checkAnswer(event) {
     checkFinalQuestion();
     console.log(score)
 }
-
+let correctChoice=true;
 //Function that is used to compare user selected answewr to the correctIndex in objArray 
-function answerCompare(userSelected, correctSelect) {
-    if (userSelected != correctSelect){
+function answerCompare(userChoice, correctChoice) {
+    if (userChoice === correctChoice){
         //Questions are worth 20 points if correct, if user has less than 20 points, the score will remain 0
         //If user selected incorrect, deduct points and update text to display incorrect
-        if (score != 0) {
-            score = score - 20;
+            score = score + 20;
+            scoreText.textContent = 'That is correct!';
         } else {
-            score = score;
-        }
+        (score >= 0)
+        score = score;
         timeLeft = timeLeft - 10;
+    if (userChoice != correctChoice){
         scoreText.textContent = 'That is incorrect!';
+
     }
-    //if user selected correct -- update text at bottom to display correct
-    //if wanting to track correct number - score++
-    else{
-        score = score + 20;
-        scoreText.textContent = 'That is correct!';
-    }
+        
+    } 
 }
 //Function to increment currentQuestion and check if final question, if it is the last question, run the endGame function, if not call loadQuestion();
 function checkFinalQuestion(){
     currentQuestion++;
     if (currentQuestion === 5){
-        clearInterval(gameClock);
-        endGame();
+        return;
+        // endGame();
         // displayScores();
     }
     else {
@@ -139,26 +138,29 @@ function checkFinalQuestion(){
     }
 }
 
-//Function is still in progress
-function endGame() {
-    //Hide all unnecessary areas to make space for scoreboard
-    var quizContainer = document.getElementById('quiz-container')
-    quizContainer.classList.add('is-hidden');
-    quizSection.classList.add('is-hidden');
-    choiceSection.classList.add('is-hidden');
-    scoreEl.classList.add('is-hidden');
-    startButton.classList.add('is-hidden');
+// //Function is still in progress
+// function endGame() {
+//     //Hide all unnecessary areas to make space for scoreboard
+//     var quizContainer = document.getElementById('quiz-container')
+//     quizContainer.classList.remove('is-hidden');
+//     quizSection.classList.remove('is-hidden');
+//     choiceSection.classList.remove('is-hidden');
+//     scoreEl.classList.remove('is-hidden');
+//     startButton.classList.remove('is-hidden');
+    
 
     //Display submission page and scoreboard
     var submissionContainer = document.getElementById('submissionContainer')
     var submissionForm = document.getElementById('submissionForm')
     
+    
+    
     //TODO: stop timer if still running
-    clearInterval(gameClock);
+    // clearInterval(gameClock);
 
     //TODO: display input for user Initials
 
-}
+// }
 
 // function displayScores() {
     //TODO: display score after submission of Initials
@@ -176,4 +178,4 @@ choiceTwo.addEventListener('click',checkAnswer)
 choiceThree.addEventListener('click', checkAnswer)
 choiceFour.addEventListener('click', checkAnswer)
 //Event listener for showing highscores, skipping quiz
-showHighScore.addEventListener('click',displayScores)
+// showHighScore.addEventListener('click',displayScores)

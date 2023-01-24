@@ -47,20 +47,23 @@ main {
 }
 
 #quiz-header {
-    background-color: white;
+    background-color:bisque;
     margin: 30px 20px 20px 20px;
     padding: 25px;
     display: block;
     text-align: center;
     height: 150px;
     border-radius: 18px;
+   
 }
 
 .header-text {
     background-color: bisque;
     font-size: 25px;
     border-radius: 10px;
-    color: black
+    color: black;
+    font-weight: 1500;
+    font: bold;
 }
 
 .quiz-text {

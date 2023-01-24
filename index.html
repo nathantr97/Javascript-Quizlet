@@ -8,11 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap" rel="stylesheet">
+
+    <!-- add title here -->
     <title>Javascript Quizlet</title>
 </head>
 <body>
     <header>
         <nav>
+
+            <!-- add high score button and need to log users score -->
             <button id="viewHS">Scoreboard</button>
         </nav>
     </header>
@@ -27,6 +31,7 @@
             <div id="quiz-box" class="is-hidden">
                 <p id="question-text" class="quiz-text">placeholder text for question</p>
                 <div>
+                    <!-- add timer to count down. need to subtract seconds if user picks an incorrect answer -->
                     <span id="timer">
                     </span>
                 </div>
@@ -38,12 +43,12 @@
                 <button id="choiceFour" class="choice-select">placeholder for choice 4</button>
             </div>
 
-    
+    <!-- score  -->
             <div id="score" class="is-hidden">
                 <div id="score-text"></div>
             </div>
 </div>
-
+<!-- this submission form comes after the user completes the quiz -->
 <section id="submissionContainer" class="is-hidden">
     <div id="submissionForm">
         <h1 class="highscore-bg">You have completed the quiz!</h1>
@@ -77,19 +82,4 @@
     <script src="assets/script.js"></script>
 </body>
 
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
 </html>
