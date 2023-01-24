@@ -2,7 +2,7 @@
 
 ## Description
 
-The motive for this project was to create an Mini Quiz application using HTML, CSS and mostly Javascript to communicate with web browsers. This project requires much more research and lots of changing, learning and debugging. Overall, this Quiz application project was a great opportunity to have a better understanding of how Javascript works behind the browswer. 
+The motive for this project was to create an Mini Quiz application using HTML, CSS and mostly Javascript to communicate with web browsers. This project requires much more research and lots of changing, learning and debugging. Overall, this Quiz application project was a great opportunity to have a better understanding of how Javascript works behind the browser. 
 
 
 
