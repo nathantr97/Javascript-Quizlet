@@ -58,3 +58,15 @@ https://nathantr97.github.io/Javascript-Quizlet/
 
 ## Credits
 
+<li> W3 School HTML DOM ELEMENT addEventListener() </li>
+
+https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+
+<li> W3 Color Picker </li>
+
+https://www.w3schools.com/colors/colors_picker.asp
+
+<li> W3 School Javascript Functions </li>
+
+https://www.w3schools.com/js/js_functions.asp
+
