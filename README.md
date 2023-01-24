@@ -20,14 +20,20 @@ The motive for this project was to create an Mini Quiz application using HTML, C
 
 ## Links
 
-<li> 
+<li> GitHub Repo URL: </li>
+
+https://github.com/nathantr97/Javascript-Quizlet
+
+<li> Application Live URL: </li>
 
 
-<li>
 
 ## Usage
 
+<li> Click on "Click to Start" button to proceed to the quiz.</li>
 
+
+<li> 
 
 
 
