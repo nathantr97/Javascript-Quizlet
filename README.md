@@ -26,15 +26,35 @@ https://github.com/nathantr97/Javascript-Quizlet
 
 <li> Application Live URL: </li>
 
-
+https://nathantr97.github.io/Javascript-Quizlet/
 
 ## Usage
 
 <li> Click on "Click to Start" button to proceed to the quiz.</li>
 
+![alt=main-page](assets/images/main-page.png)
 
-<li> 
+<li> User has 100 seconds to complete 5 questions. Every correct answer user will receive 20 points and 20 points will be deducted for every incorrect answer unless user has no 0 points </li>
 
+![alt=quiz-page](assets/images/actual-quiz.png)
 
+<li> Button background will turn black and text will turn white to indicate which button is hovered. </li>
+
+![alt=hovered-button](assets/images/hovered-button.png)
+
+<li> The application will notify users at the bottom of the page whether their selection was correct or incorrect.</li>
+
+![alt=incorrect-indicator](assets/images/incorrect-answer.png)
+
+![alt=correct-indicator](assets/images/correct-answer.png)
+
+<li> Scoreboard button will show user's scores. <li>
+
+![alt=scoreboard-button](assets/images/scoreboard-button.png)
+
+<li> Open Console under Inspect to see how user's selections were scored </li>
+
+![alt=console](assets/images/score-progress.png)
 
 ## Credits
+
